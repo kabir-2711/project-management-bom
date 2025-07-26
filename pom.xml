@@ -1,0 +1,133 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>project.management.bom</groupId>
+	<artifactId>project-management-bom</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>project-management-bom</name>
+
+	<packaging>pom</packaging>
+
+	<properties>
+		<utilities.version>0.1.0</utilities.version>
+		<model.version>0.1.0</model.version>
+		<spring.version>3.5.0</spring.version>
+		<json.version>20240303</json.version>
+		<spring-doc.version>1.7.0</spring-doc.version>
+		<lombok.version>1.18.34</lombok.version>
+		<commons-lang.version>3.17.0</commons-lang.version>
+		<jakarta.annotation-api.version>2.1.1</jakarta.annotation-api.version>
+		<hibernate-validator.version>8.0.1.Final</hibernate-validator.version>
+		<hibernate-core.version>6.6.2.Final</hibernate-core.version>
+		<micrometer-registry-stackdriver.version>1.13.6</micrometer-registry-stackdriver.version>
+		<grpc-netty.version>1.68.1</grpc-netty.version>
+		<gson.version>2.13.1</gson.version>
+		<spring-boot-starter-kafka.version>4.0.0-M2</spring-boot-starter-kafka.version>
+		<slf4j-api.version>2.0.17</slf4j-api.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>project.utilities</groupId>
+				<artifactId>utilities</artifactId>
+				<version>${utilities.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>project.model</groupId>
+				<artifactId>model</artifactId>
+				<version>${model.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-log4j2</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.json</groupId>
+				<artifactId>json</artifactId>
+				<version>${json.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-ui</artifactId>
+				<version>${spring-doc.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<scope>provided</scope>
+				<version>${lombok.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>jakarta.annotation</groupId>
+				<artifactId>jakarta.annotation-api</artifactId>
+				<version>${jakarta.annotation-api.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${hibernate-core.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate.validator</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>${hibernate-validator.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.micrometer</groupId>
+				<artifactId>micrometer-registry-stackdriver</artifactId>
+				<version>${micrometer-registry-stackdriver.version}</version>
+				<exclusions>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>io.grpc</groupId>
+				<artifactId>grpc-netty</artifactId>
+				<version>${grpc-netty.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>${gson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j-api.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.kafka</groupId>
+				<artifactId>spring-kafka</artifactId>
+				<version>${spring-boot-starter-kafka.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>
